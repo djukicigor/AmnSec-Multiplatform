@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:700');
+
+.green-button.btn {
+  background-color: #27ba45;
+  border-color: #27ba45;
+}
+
+.green-button.btn:hover, .green-button.btn-primary:not(:disabled):not(.disabled):active, .green-button.btn:focus {
+  background-color: #1e8633;
+  border-color: #1e8633;
+}
+
+body .container h1 {
+  font-weight: bold;
+  margin-top: .5rem; 
+  font-family: 'Lora', serif;
+}
+
+h1 span {
+  color: #27ba45;
+}
+
+form h3 {
+  padding-bottom: 30px;
+  max-width: 90%;
+  margin: 0 auto;
+  font-size: 1.45rem;
+}
+
+body {
+  background-image: url('../images/bg-image.jpeg');
+  background-size: cover;
+  background-position-y: 130px;
+}
+
+body .modal-footer {
+  justify-content: center;
+}
+
+.cause-text {
+  font-weight: bold;
+  padding: 10px 5px;
+}
+
+.bleeding-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.bleeding-buttons button:first-child {
+  margin-right: 30px;
+}
+
+.radio-feedback {
+  position: absolute;
+  left: -48%;
+}

@@ -3,12 +3,12 @@ import React from 'react';
 export default function Form(props) {
   return (
     <form onSubmit={props.onSubmit} className="needs-validation" noValidate>
-      <h3 className="text-center">Please fill form to check your health.</h3>
+      <h3 className="text-center">AmnSec offers the potential cause of secondary amenorrhea using specific indicators.</h3>
       <div className="form-row">
         <div className="form-group col-md-4">
           <label htmlFor="input-tsh" className="col-sm-2 col-form-label">TSH:</label>
           <div className="col-sm-10">
-            <input type="number" className="form-control" id="input-tsh" placeholder="TSH" required />
+            <input type="number" className="form-control" id="input-tsh" placeholder="TSH" required min=".1" step=".1" />
             <div className="invalid-feedback">
               Please fill TSH.
             </div>
@@ -17,7 +17,7 @@ export default function Form(props) {
         <div className="form-group col-md-4">
           <label htmlFor="input-prolactin" className="col-sm-2 col-form-label">Prolactin:</label>
           <div className="col-sm-10">
-            <input type="number" className="form-control" id="input-prolactin" placeholder="Prolactin" required />
+            <input type="number" className="form-control" id="input-prolactin" placeholder="Prolactin" required min="1" />
             <div className="invalid-feedback">
               Please fill prolactin.
             </div>
@@ -26,7 +26,7 @@ export default function Form(props) {
         <div className="form-group col-md-4">
           <label htmlFor="input-fsh" className="col-sm-2 col-form-label">FSH:</label>
           <div className="col-sm-10">
-            <input type="number" className="form-control" id="input-fsh" placeholder="FSH" required />
+            <input type="number" className="form-control" id="input-fsh" placeholder="FSH" required min="1" />
             <div className="invalid-feedback">
               Please fill FSH.
             </div>
@@ -39,7 +39,7 @@ export default function Form(props) {
             Testosterone:
           </label>
           <div className="col-sm-10">
-            <input type="number" className="form-control" id="input-testosterone" placeholder="Testosterone" required />
+            <input type="number" className="form-control" id="input-testosterone" placeholder="Testosterone" required min="1" />
             <div className="invalid-feedback">
               Please fill Testosterone.
             </div>
@@ -48,7 +48,7 @@ export default function Form(props) {
         <div className="form-group col-md-4">
           <label htmlFor="input-dheas" className="col-sm-2 col-form-label">DHEAS</label>
           <div className="col-sm-10">
-            <input type="number" className="form-control" id="input-dheas" placeholder="DHEAS" required />
+            <input type="number" className="form-control" id="input-dheas" placeholder="DHEAS" required min="1" />
             <div className="invalid-feedback">
               Please fill DHEAS.
             </div>
@@ -66,14 +66,14 @@ export default function Form(props) {
             <div className="custom-control custom-radio col-sm-6 mb-3">
               <input type="radio" name="virilism" id="virilism2" value="no" className="custom-control-input" required />
               <label className="custom-control-label" htmlFor="virilism2">No</label>
-              <div className="invalid-feedback">You have to choose one option.</div>
+              <div className="invalid-feedback radio-feedback">You have to choose one option.</div>
             </div>
           </div>
         </fieldset>
       </div>
       <div className="form-group row">
         <div className="col-sm-12 text-center">
-          <button type="submit" className="btn btn-primary">Calculate</button>
+          <button type="submit" className="btn btn-primary green-button" data-toggle="modal" data-target="#causeModal">Calculate</button>
         </div>
       </div>
     </form>
