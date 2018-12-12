@@ -1,2 +1,2 @@
-# AmnSec-Desktop
-Desktop app for competition
+# AmnSec-Multiplatform
+Client, server and Desktop app for competition
